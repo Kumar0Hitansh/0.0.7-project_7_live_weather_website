@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Live</title>
+    <link rel="shortcut icon" href="img/xrainbow.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="maincont">
+      <div class="searchbox">
+        <!-- search bar start -->
+        <input
+          type="text"
+          placeholder="Enter City Name"
+          spellcheck="false"
+          id="inputfeed"
+        />
+        <button id="searchBtn">
+          <img src="img/search2.png" alt="search" />
+        </button>
+      </div>
+
+      <div class="maininfo">
+        <!-- main weather info -->
+
+        <img
+          src="img/xrainbow.png"
+          class="weathericon"
+          alt="weathericon"
+          id="wetimg"
+        />
+        <h1 class="temp" id="tempreture">Search The City</h1>
+        <h2 class="city" id="cityname">To View weather</h2>
+
+        <div class="details">
+          <div class="col" id="col1">
+            <img src="img/humidity.svg" alt="" />
+            <div>
+              <div class="humidity" id="humidity"></div>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div class="col" id="col2">
+            <img src="img/wind.svg" alt="" />
+            <div>
+              <div class="humidity" id="windspeed"></div>
+              <p>windspeed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="capintalheading">    capitals</div> -->
+    <div class="statecapitals">
+      <div
+        class="quickClick"
+        id="delhi"
+        onclick="fetchWether(document.querySelector('#delhi').innerHTML)"
+      >
+        delhi
+      </div>
+
+      <div
+        class="quickClick"
+        id="kolkata"
+        onclick="fetchWether(document.querySelector('#kolkata').innerHTML)"
+      >
+        Kolkata
+      </div>
+
+      <div
+        class="quickClick"
+        id="jammu"
+        onclick="fetchWether(document.querySelector('#jammu').innerHTML)"
+      >
+        jammu
+      </div>
+
+      <div
+        class="quickClick"
+        id="jaipur"
+        onclick="fetchWether(document.querySelector('#jaipur').innerHTML)"
+      >
+        Jaipur
+      </div>
+
+      <div
+        class="quickClick"
+        id="kota"
+        onclick="fetchWether(document.querySelector('#kota').innerHTML)"
+      >
+        Kota
+      </div>
+
+      <div
+        class="quickClick"
+        id="leh"
+        onclick="fetchWether(document.querySelector('#leh').innerHTML)"
+      >
+        leh
+      </div>
+
+      <div
+        class="quickClick"
+        id="gandhinagar"
+        onclick="fetchWether(document.querySelector('#gandhinagar').innerHTML)"
+      >
+        Gandhinagar
+      </div>
+
+      <div
+        class="quickClick"
+        id="chandigarh"
+        onclick="fetchWether(document.querySelector('#chandigarh').innerHTML)"
+      >
+        Chandigarh
+      </div>
+
+      <div
+        class="quickClick"
+        id="shimla"
+        onclick="fetchWether(document.querySelector('#shimla').innerHTML)"
+      >
+        Shimla
+      </div>
+
+      <div
+        class="quickClick"
+        id="bangalore"
+        onclick="fetchWether(document.querySelector('#bangalore').innerHTML)"
+      >
+        Bangalore
+      </div>
+
+      <div
+        class="quickClick"
+        id="mumbai"
+        onclick="fetchWether(document.querySelector('#mumbai').innerHTML)"
+      >
+        Mumbai
+      </div>
+
+      <div
+        class="quickClick"
+        id="shilong"
+        onclick="fetchWether(document.querySelector('#shilong').innerHTML)"
+      >
+        Shilong
+      </div>
+
+      <div
+        class="quickClick"
+        id="bhubaneshwar"
+        onclick="fetchWether(document.querySelector('#bhubaneshwar').innerHTML)"
+      >
+        Bhubaneshwar
+      </div>
+
+      <div
+        class="quickClick"
+        id="chennai"
+        onclick="fetchWether(document.querySelector('#chennai').innerHTML)"
+      >
+        Chennai
+      </div>
+
+      <div
+        class="quickClick"
+        id="hydrabad"
+        onclick="fetchWether(document.querySelector('#hydrabad').innerHTML)"
+      >
+        Hyderabad
+      </div>
+
+      <div
+        class="quickClick"
+        id="luknow"
+        onclick="fetchWether(document.querySelector('#luknow').innerHTML)"
+      >
+        Lucknow
+      </div>
+    </div>
+
+    <div class="something">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      earum in, dolore modi distinctio ex eos officiis minima aliquam sunt
+      pariatur commodi atque libero sed dignissimos laboriosam, fuga perferendis
+      non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+      voluptates vitae, itaque vero dolores perferendis sed? Dolore
+      exercitationem quod praesentium accusamus neque nam aspernatur nulla
+      cumque odio totam vel architecto cupiditate in at veritatis, voluptas
+      alias. Fuga molestiae voluptate maiores atque distinctio dolore. Ullam,
+      animi voluptates laborum eveniet aliquam ipsa odio maiores. Perspiciatis
+      eos velit quis vel. Voluptate, quidem officiis qui repellendus adipisci
+      sunt harum possimus repudiandae maiores, in eligendi veritatis. Soluta at
+      sint dicta, consectetur aliquam reprehenderit blanditiis, rem, consequatur
+      illum qui ex fugit. Cumque quaerat quos facilis magnam minima obcaecati
+      eaque neque ea natus. Laudantium, optio totam!
+    </div>
+
+    <footer>
+      <div id="f1" class="f">Weather Forcast</div>
+      <div id="f2" class="f">
+        <h5>about us</h5>
+
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            consectetur ?
+          </li>
+        </ul>
+      </div>
+      <div id="f3" class="f">
+        <h5>contact us</h5>
+        <ul>
+          <li>call us :- 9079746497</li>
+          <li>mail us :- @gmail.com</li>
+          <li>text us &nbsp;:- 8233383206</li>
+          <li>visit us :- 999 999 8821</li>
+        </ul>
+      </div>
+      <div id="f4" class="f">
+        <h5>follow us</h5>
+        <ul>
+          <li>instagram :-</li>
+          <li>facebook :-</li>
+          <li>youtube :-</li>
+          <li>twitter :-</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
